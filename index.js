@@ -1,6 +1,8 @@
 let removeitem = document.getElementById('first_div_that_gets_permission');
 let removeby = document.getElementById('button_of_all_permissions')
 
+document.getElementById('first_div_that_gets_permission').style.overflowY='hidden';
+
 removeby.addEventListener('click', ()=>{
     removeitem.style.opacity='0';
     document.getElementById('div1').style.opacity='0';
@@ -16,10 +18,12 @@ removeby.addEventListener('click', ()=>{
     document.getElementById("OS_logo_from_name_and_logo_div").classList.add("show");
     document.getElementById("texts_from_name_and_logo_div").classList.add("show");
     document.getElementById("diclaimer_txt_from_disclaimer_div_bottom").classList.add("show");
+    document.body.style.overflowY='hidden'
+    document.getElementById("fifa2026song").play();
     const item = document.getElementById("loader");
     setTimeout(() => {
         item.classList.add("show");
-    }, 7000);
+    }, 8500);
     setTimeout(() => {
         item.classList.remove("show");
         document.getElementById('intro_background').style.opacity='0';
@@ -41,4 +45,12 @@ removeby.addEventListener('click', ()=>{
         document.body.style.backgroundColor='#ffffff'
         //document.getElementById('').style.opacity='0';
     }, 11000);
+    setTimeout(()=>{
+        document.getElementById("afa_logo_from_topperdiv").classList.add("show");
+        document.getElementById("fifa_logo_from_topperdiv").classList.add("show");
+        document.getElementById("three_starts").classList.add("show");
+        document.getElementById("world_cup_detail_div").classList.add("show");
+        document.getElementById("fifa2026afa").classList.add("show");
+        document.body.style.overflowY='visible';
+    },11111);
 });
