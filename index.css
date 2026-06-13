@@ -11,6 +11,7 @@ body{
     height:100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 #first_div_that_gets_permission{
     height: 100vh;
@@ -29,54 +30,36 @@ body{
 }
 #div1{
     animation: div1ani 6s ease infinite;
-    background-color:rgb(0, 94, 255) ;
+    background-color:rgb(0, 94, 255);
     z-index: 4;
     position: fixed;
 }
 @keyframes div1ani{
-    0%{
-        transform: translate(575px,225px);
-    }
-    50%{
-        transform: translate(575px,0px);
-    }
-    100%{
-        transform: translate(575px,225px);
-    }
+    0%   { transform: translate(50vw, 30vh); }
+    50%  { transform: translate(50vw, 0px);  }
+    100% { transform: translate(50vw, 30vh); }
 }
 #div2{
     animation: div2ani 6s ease infinite;
-    background-color:rgb(0, 170, 0) ;
+    background-color:rgb(0, 170, 0);
     z-index: 5;
     position: fixed;
 }
 @keyframes div2ani{
-    0%{
-        transform: translate(575px,225px);
-    }
-    50%{
-        transform: translate(900px,500px);
-    }
-    100%{
-        transform: translate(575px,225px);
-    }
+    0%   { transform: translate(50vw, 30vh); }
+    50%  { transform: translate(80vw, 60vh); }
+    100% { transform: translate(50vw, 30vh); }
 }
 #div3{
     animation: div3ani 6s ease infinite;
-    background-color:rgb(190, 2, 2) ; 
+    background-color:rgb(190, 2, 2);
     z-index: 6;
     position: fixed;
 }
 @keyframes div3ani{
-    0%{
-        transform: translate(575px,225px);
-    }
-    50%{
-        transform: translate(250px,500px);
-    }
-    100%{
-        transform: translate(575px,225px);
-    }
+    0%   { transform: translate(50vw, 30vh); }
+    50%  { transform: translate(20vw, 60vh); }
+    100% { transform: translate(50vw, 30vh); }
 }
 #main_div_of_permission{
     position: fixed;
@@ -92,12 +75,12 @@ body{
 }
 #div_of_txt_permission{
     height: 300px;
-    width: 400px;
     background-color: rgb(0, 0, 0);
     position: fixed;
     z-index: 11;
     border-radius: 15px;
     padding: 1% 2%;
+    width: min(400px, 90vw);
     animation: hajabajalaani 0.5s ease forwards;
 }
 @keyframes hajabajalaani{
@@ -124,7 +107,6 @@ body{
 #button_of_all_permissions:hover{
     background-color: rgba(131, 131, 131, 0.376);
     height: 42%;
-
 }
 #intro_background{
     height: 86vh;
@@ -145,6 +127,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 #logo_of_afa_from_logo_background_from_intro_background{
     height: 150px;
@@ -192,58 +176,50 @@ body{
     }
     72%{
         opacity: 0;
-        transform: scale(1);  
+        transform: scale(1);
     }
     80%{
         opacity: 0;
-        transform: scale(0.7);  
+        transform: scale(0.7);
     }
     85%{
         opacity: 0;
-        transform: scale(0.5); 
+        transform: scale(0.5);
     }
     100%{
         opacity: 0;
-        transform: scale(0);  
+        transform: scale(0);
     }
+}
+#diclaimer_txt_from_disclaimer_div_bottom{
+    color: black;
+}
+#disclaimer_div_bottom{
+    height: auto;
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    width: 100%;
+    background-color: #000000;
 }
 #FIFA_LOGO_from_logo_background_from_intro_background{
     height: 160px;
 }
 #FIFA_LOGO_from_logo_background_from_intro_background.show{
-    animation: fifa_animation 7.5s ease forwards;  
+    animation: fifa_animation 7.5s ease forwards;
 }
+/* Default (>1280px): -90px centers FIFA logo when AFA+divider slide out */
 @keyframes fifa_animation {
-    0%{
-        opacity: 0;
-        transform: translateX(250px);
-    }
-    25%{
-        opacity: 1;
-        transform: translateX(0px);
-    }
-    70%{
-        opacity: 1;
-        transform: translateX(0px);
-    }
-    79%{
-        opacity: 1;
-        transform: translateX(-90px);
-        height: 160px; 
-    }
-    85%{
-        opacity: 1;
-        transform: translateX(-90px);
-        height: 350px;
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(-90px);
-        height: 350px;
-    }
+    0%  { opacity: 0; transform: translateX(250px); height: 160px; }
+    25% { opacity: 1; transform: translateX(0px);   height: 160px; }
+    70% { opacity: 1; transform: translateX(0px);   height: 160px; }
+    79% { opacity: 1; transform: translateX(-100px); height: 160px; }
+    85% { opacity: 1; transform: translateX(-100px); height: 350px; }
+    100%{ opacity: 1; transform: translateX(-100px); height: 350px; }
 }
 #name_and_logo_div{
-    height:9vh;
+    height:14vh;
     background-color: rgb(0, 0, 0);
     width: 100%;
     display: flex;
@@ -263,54 +239,27 @@ body{
 @keyframes OS_logo_animation {
     0%{
         opacity:0;
-        transform: translateY(-1px);  
+        transform: translateY(-1px);
     }
     25%{
         opacity:1;
-        transform: translateY(0px); 
+        transform: translateY(0px);
     }
     50%{
         opacity:1;
-        transform: translateY(0px); 
+        transform: translateY(0px);
     }
     75%{
         opacity:0;
-        transform: translateY(-1px);  
+        transform: translateY(-1px);
     }
     100%{
         opacity:0;
-        transform: translateY(-1px);          
+        transform: translateY(-1px);
     }
 }
 #texts_from_name_and_logo_div.show{
     animation: OS_logo_animation 8s ease forwards;
-}
-#disclaimer_div_bottom{
-    height: 5vh;
-    background-color: rgb(0, 0, 0);
-    padding-left: 0.5%;
-    display: flex;
-    align-items: center;
-    opacity: 1;
-    visibility: visible;
-    transition: 0.6s;
-}
-#diclaimer_txt_from_disclaimer_div_bottom{
-    width: 0;
-    overflow: 0;
-    white-space: nowrap;
-}
-#diclaimer_txt_from_disclaimer_div_bottom.show{
-    animation: typing 3s ease forwards
-}
-@keyframes typing{
-    from{
-        transform: translateY(11px);
-        opacity: 0;
-    }to{
-        transform: translateY(0px);
-        opacity: 1;
-    }
 }
 #loading_div{
     height: 50px;
@@ -340,37 +289,34 @@ body{
     opacity: 1;
 }
 @keyframes loading{
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg); }
+}
+#fifa2026afa{
+    display: none;
 }
 #fifa2026afa.show{
-    margin-top: -100vh;
-    height:auto;
+    display: block;
+    margin-top: 0;
+    height: auto;
     width: 100%;
     background: #00bbff;
     background: linear-gradient(90deg,rgba(0, 187, 255, 1) 0%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 60%, rgba(0, 187, 255, 1) 100%);
-    z-index: -1;
+    z-index: 0;
 }
 #topper_nav{
     width: 100%;
     background-color: #83deff;
-    z-index: -10;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.62);
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 12px;
     animation: topper_div_ani 0.5s ease forwards;
 }
 @keyframes topper_div_ani{
-    from{
-        height: 0px;
-    }to{
-        height: 100px;
-    }
+    from{ height: 0px; }
+    to{ height: 100px; }
 }
 #afa_logo_from_topperdiv{
     height: 90px;
@@ -399,48 +345,43 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px 0;
 }
 #three_starts{
-    height:100px;
+    height: 100px;
 }
 #three_starts.show{
     animation: starani 0.8s ease forwards;
 }
 @keyframes starani{
-    from{
-        opacity: 0;
-    }to{
-        opacity:1;
-    }
+    from{ opacity: 0; }
+    to{ opacity: 1; }
 }
 #world_cup_detail_div{
     height: auto;
     width: 100%;
     background-color: #8c8c8c43;
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px;
     padding-bottom: 2%;
 }
 #world_cup_detail_div.show{
     animation: last_ani 0.6s ease forwards;
 }
 @keyframes last_ani{
-    from{
-        opacity: 0;
-    }to{
-        opacity: 1;
-    }
+    from{ opacity: 0; }
+    to{ opacity: 1; }
 }
 .world_cup_lists{
     font-size: 30px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
     text-align: center;
 }
 .wcpic{
     height: 300px;
     border-radius: 10px;
+    max-width: 100%;
+    object-fit: cover;
 }
 .pic_with_detail_wc{
     height: auto;
@@ -458,10 +399,511 @@ body{
     margin-top: 3%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
+    text-align: center;
+    padding: 0 10px;
 }
 .moreee{
     height: auto;
     width: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
+    padding: 0 10px;
+}
+#made_by_from_main_div{
+    height: auto;
+    width: 100%;
+    font-size: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    gap: 10px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+#od_logo_from_made_by_from_main_div{
+    height: 50px;
+}
+#div_of_2026{
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.33);
+}
+.container{
+    width: min(1200px, 90%);
+    margin: auto;
+    padding: 50px 0;
+}
+header{
+    text-align: center;
+    margin-bottom: 50px;
+}
+header h1{
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 10px;
+}
+header p{
+    color: #dcdcdc;
+}
+.matches{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+.card{
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 25px;
+    padding: 30px;
+    transition: .4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+.card:hover{
+    transform: translateY(-10px);
+    border-color: #75cfff;
+}
+.match{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.info{
+    color: #0e0e0e;
+    margin-bottom: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.countdown{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.box{
+    background: rgba(117,207,255,.15);
+    border-radius: 15px;
+    padding: 15px 10px;
+    text-align: center;
+}
+.box span{
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.box small{
+    color: #d7f0ff;
+}
+.live{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #65ff65;
+    animation: pulse 1.2s infinite;
+}
+@keyframes pulse{
+    0%,100%{ transform: scale(1); }
+    50%{ transform: scale(1.05); }
+}
+#legends{
+    max-height: 100%;
+    width: 100%;
+    margin-top: 10px;
+}
+.containerr{
+    width: min(1200px, 92%);
+    margin: auto;
+    background-color: #0000003e;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+.header{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.header h1{
+    font-size: clamp(2rem, 4vw, 3.5rem);
+}
+.header p{
+    color: #cfd9ff;
+    margin-top: 8px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+.cardd{
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.cardd:hover{
+    transform: translateY(-8px);
+    border-color: #7ccfff;
+}
+.img{
+    height: 180px;
+    background: linear-gradient(135deg,#74c0fc33,#ffffff10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #cfe8ff;
+}
+.content{
+    padding: 15px;
+}
+.name{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.role{
+    font-size: 0.9rem;
+    color: #bcd6ff;
+    margin-top: 3px;
+}
+.btn{
+    margin-top: 10px;
+    display: inline-block;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 8px;
+    background: #74c0fc33;
+    border: 1px solid #74c0fc55;
+    color: white;
+    cursor: pointer;
+}
+.details{
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s ease;
+    padding: 0 15px;
+    color: #d9ecff;
+    font-size: 13px;
+}
+.cardd.active .details{
+    max-height: 200px;
+    padding: 10px 15px 15px 15px;
+}
+/* ================================================
+   BREAKPOINT 1 — LARGE DESKTOP  (max-width: 1440px)
+   Wide monitors, large laptops
+   ================================================ */
+@media (max-width: 1440px) {
+    .container  { width: min(1100px, 92%); }
+    .containerr { width: min(1100px, 94%); }
+    .grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    /* FIFA offset unchanged — screens still wide */
+    @keyframes fifa_animation {
+        0%  { opacity: 0; transform: translateX(250px); height: 160px; }
+        25% { opacity: 1; transform: translateX(0px);   height: 160px; }
+        70% { opacity: 1; transform: translateX(0px);   height: 160px; }
+        79% { opacity: 1; transform: translateX(-100px); height: 160px; }
+        85% { opacity: 1; transform: translateX(-100px); height: 320px; }
+        100%{ opacity: 1; transform: translateX(-100px); height: 320px; }
+    }
+}
+/* ================================================
+   BREAKPOINT 2 — STANDARD LAPTOP  (max-width: 1280px)
+   13"–15" laptops, lower-res displays
+   ================================================ */
+@media (max-width: 1280px) {
+    .container { width: min(1000px, 92%); }
+    .matches { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .world_cup_lists { font-size: 27px; }
+    .more   { font-size: 18px; }
+    .moreee { font-size: 18px; }
+    @keyframes fifa_animation {
+        0%  { opacity: 0; transform: translateX(250px); height: 160px; }
+        25% { opacity: 1; transform: translateX(0px);   height: 160px; }
+        70% { opacity: 1; transform: translateX(0px);   height: 160px; }
+        79% { opacity: 1; transform: translateX(-100px); height: 160px; }
+        85% { opacity: 1; transform: translateX(-100px); height: 300px; }
+        100%{ opacity: 1; transform: translateX(-100px); height: 300px; }
+    }
+}
+/* ================================================
+   BREAKPOINT 3 — TABLET LANDSCAPE  (max-width: 1024px)
+   ================================================ */
+@media (max-width: 1024px) {
+    .dv{
+        height: 130px;
+        width: 130px;
+    }
+    #topper_nav{
+        height: 80px;
+        gap: 8px;
+    }
+    #afa_logo_from_topperdiv,
+    #fifa_logo_from_topperdiv{
+        height: 70px;
+    }
+    #three_starts{
+        height: 80px;
+    }
+    .matches{
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 18px;
+    }
+    .world_cup_lists{
+        font-size: 26px;
+    }
+    .wcpic{
+        height: 250px;
+    }
+    .more{
+        font-size: 18px;
+    }
+    .moreee{
+        font-size: 18px;
+    }
+    .grid{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+    }
+    .container{
+        padding: 35px 0;
+    }
+    @keyframes fifa_animation {
+        0%  { opacity: 0; transform: translateX(200px); height: 150px; }
+        25% { opacity: 1; transform: translateX(0px);   height: 150px; }
+        70% { opacity: 1; transform: translateX(0px);   height: 150px; }
+        79% { opacity: 1; transform: translateX(-100px); height: 150px; }
+        85% { opacity: 1; transform: translateX(-100px); height: 270px; }
+        100%{ opacity: 1; transform: translateX(-100px); height: 270px; }
+    }
+}
+/* ================================================
+   BREAKPOINT 4 — TABLET PORTRAIT / LARGE MOBILE  (max-width: 768px)
+   ================================================ */
+@media (max-width: 768px) {
+    .dv{
+        height: 100px;
+        width: 100px;
+    }
+    #logo_of_afa_from_logo_background_from_intro_background{ height: 90px; }
+    #FIFA_LOGO_from_logo_background_from_intro_background{   height: 100px; }
+    #logo_devider_from_logo_background_from_intro_background{
+        font-size: 100px !important;
+    }
+    @keyframes fifa_animation {
+        0%  { opacity: 0; transform: translateX(150px); height: 100px; }
+        25% { opacity: 1; transform: translateX(0px);   height: 100px; }
+        70% { opacity: 1; transform: translateX(0px);   height: 100px; }
+        79% { opacity: 1; transform: translateX(-75px); height: 100px; }
+        85% { opacity: 1; transform: translateX(-75px); height: 220px; }
+        100%{ opacity: 1; transform: translateX(-75px); height: 220px; }
+    }
+    #topper_nav{
+        gap: 6px;
+    }
+    @keyframes topper_div_ani{
+        from{ height: 0px; }
+        to{ height: 70px; }
+    }
+    #afa_logo_from_topperdiv,
+    #fifa_logo_from_topperdiv{
+        height: 55px;
+    }
+    @keyframes ani_topper_div{
+        from{ opacity: 0; height: 0px; }
+        to{ opacity: 1; height: 55px; }
+    }
+    #three_starts{
+        height: 65px;
+    }
+    .container{
+        width: 95%;
+        padding: 25px 0;
+    }
+    header{
+        margin-bottom: 30px;
+    }
+    .matches{
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .card{
+        padding: 20px;
+        border-radius: 18px;
+    }
+    .match{
+        font-size: 1.2rem;
+    }
+    .box span{
+        font-size: 1.5rem;
+    }
+    .box{
+        padding: 10px 6px;
+    }
+    .containerr{
+        width: 95%;
+        padding: 16px 10px;
+    }
+    .grid{
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 12px;
+    }
+    .img{
+        height: 130px;
+    }
+    .name{
+        font-size: 1rem;
+    }
+    .world_cup_lists{
+        font-size: 20px;
+    }
+    .wcpic{
+        height: auto;
+        width: 100%;
+        max-width: 400px;
+    }
+    .more{
+        font-size: 15px;
+        padding: 0 6px;
+    }
+    .moreee{
+        font-size: 15px;
+        padding: 0 6px;
+    }
+    .moreee p{
+        margin-bottom: 16px !important;
+    }
+    #made_by_from_main_div{
+        font-size: 120%;
+    }
+    #od_logo_from_made_by_from_main_div{
+        height: 38px;
+    }
+    #div_of_txt_permission{
+        height: 260px;
+    }
+}
+/* ================================================
+   BREAKPOINT 5 — SMALL PHONES  (max-width: 480px)
+   iPhone SE, older Android phones
+   ================================================ */
+@media (max-width: 480px) {
+    .dv{ height: 80px; width: 80px; }
+    #logo_of_afa_from_logo_background_from_intro_background{ height: 70px; }
+    #FIFA_LOGO_from_logo_background_from_intro_background{   height: 80px; }
+    #logo_devider_from_logo_background_from_intro_background{
+        font-size: 44px;
+    }
+    @keyframes fifa_animation {
+        0%  { opacity: 0; transform: translateX(120px); height: 80px; }
+        25% { opacity: 1; transform: translateX(0px);   height: 80px; }
+        70% { opacity: 1; transform: translateX(0px);   height: 80px; }
+        79% { opacity: 1; transform: translateX(-50px); height: 80px; }
+        85% { opacity: 1; transform: translateX(-50px); height: 180px; }
+        100%{ opacity: 1; transform: translateX(-50px); height: 180px; }
+    }
+    #afa_logo_from_topperdiv,
+    #fifa_logo_from_topperdiv{
+        height: 44px;
+    }
+    #three_starts{
+        height: 50px;
+    }
+    .countdown{
+        gap: 6px;
+    }
+    .box{
+        padding: 8px 4px;
+        border-radius: 10px;
+    }
+    .box span{
+        font-size: 1.2rem;
+    }
+    .box small{
+        font-size: 10px;
+    }
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .img{
+        height: 120px;
+    }
+    .world_cup_lists{
+        font-size: 17px;
+    }
+    .more{
+        font-size: 14px;
+    }
+    .moreee{
+        font-size: 14px;
+    }
+    .match{
+        font-size: 1rem;
+    }
+    #made_by_from_main_div{
+        font-size: 100%;
+        flex-direction: column;
+        gap: 6px;
+        padding: 12px 0;
+    }
+}
+/* ================================================
+   BREAKPOINT 6 — VERY SMALL PHONES  (max-width: 360px)
+   Galaxy S series, older small Androids
+   ================================================ */
+@media (max-width: 360px) {
+    .dv{ height: 60px; width: 60px; }
+    #div_of_txt_permission{ height: 230px; }
+    #button_of_all_permissions{ font-size: 160%; }
+    /* AFA now ~52px wide, FIFA offset ~-32px */
+    #logo_of_afa_from_logo_background_from_intro_background{ height: 52px; }
+    #FIFA_LOGO_from_logo_background_from_intro_background{   height: 60px; }
+    #logo_devider_from_logo_background_from_intro_background{
+        font-size: 44px;
+    }
+    @keyframes fifa_animation {
+        0%  { opacity: 0; transform: translateX(100px); height: 60px; }
+        25% { opacity: 1; transform: translateX(0px);   height: 60px; }
+        70% { opacity: 1; transform: translateX(0px);   height: 60px; }
+        79% { opacity: 1; transform: translateX(-32px); height: 60px; }
+        85% { opacity: 1; transform: translateX(-32px); height: 140px; }
+        100%{ opacity: 1; transform: translateX(-32px); height: 140px; }
+    }
+    #afa_logo_from_topperdiv,
+    #fifa_logo_from_topperdiv{ height: 36px; }
+    @keyframes topper_div_ani{
+        from{ height: 0px;  }
+        to{   height: 50px; }
+    }
+    @keyframes ani_topper_div{
+        from{ opacity: 0; height: 0px;  }
+        to{   opacity: 1; height: 36px; }
+    }
+    #three_starts{ height: 40px; }
+    header h1{ font-size: 1.5rem; }
+    .card{ padding: 14px; border-radius: 14px; }
+    .match{ font-size: 0.9rem; }
+    .countdown{ gap: 4px; }
+    .box{ padding: 6px 3px; border-radius: 8px; }
+    .box span{ font-size: 1rem; }
+    .box small{ font-size: 9px; }
+    .world_cup_lists{ font-size: 14px; }
+    .wcpic{ max-width: 100%; }
+    .more{ font-size: 13px; }
+    .moreee{ font-size: 13px; }
+    .img{ height: 100px; }
+    .name{ font-size: 0.9rem; }
+    .containerr{ padding: 10px 8px; }
+    #made_by_from_main_div{
+        font-size: 90%;
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px 0;
+    }
+    #od_logo_from_made_by_from_main_div{ height: 26px; }
 }
