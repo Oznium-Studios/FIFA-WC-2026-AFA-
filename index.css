@@ -722,9 +722,9 @@ header p{
         0%  { opacity: 0; transform: translateX(250px); height: 100px; }
         25% { opacity: 1; transform: translateX(0px);   height: 100px; }
         70% { opacity: 1; transform: translateX(0px);   height: 100px; }
-        79% { opacity: 1; transform: translateX(-70px); height: 100px; }
-        85% { opacity: 1; transform: translateX(-70px); height: 220px; }
-        100%{ opacity: 1; transform: translateX(-70px); height: 220px; }
+        79% { opacity: 1; transform: translateX(-65px); height: 100px; }
+        85% { opacity: 1; transform: translateX(-65px); height: 220px; }
+        100%{ opacity: 1; transform: translateX(-65px); height: 220px; }
     }
     #topper_nav{
         gap: 6px;
