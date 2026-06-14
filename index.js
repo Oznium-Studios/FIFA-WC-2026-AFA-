@@ -31,6 +31,7 @@ removeby.addEventListener('click', ()=>{
     document.getElementById("OS_logo_from_name_and_logo_div").classList.add("show");
     document.getElementById("texts_from_name_and_logo_div").classList.add("show");
     document.getElementById("diclaimer_txt_from_disclaimer_div_bottom").classList.add("show");
+    document.body.style.cursor='none';
     document.body.style.overflowY='hidden'
     document.getElementById("fifa2026song").play();
     const item = document.getElementById("loader");
@@ -55,6 +56,7 @@ removeby.addEventListener('click', ()=>{
         document.getElementById('name_and_logo_div').style.height = '0';
         document.getElementById('texts_from_name_and_logo_div').style.opacity='0';
         document.getElementById('OS_logo_from_name_and_logo_div').style.opacity='0';
+        document.body.style.cursor='default';
         document.body.style.backgroundColor='#ffffff'
         //document.getElementById('').style.opacity='0';
     }, 9500);

@@ -461,10 +461,6 @@ header p{
     transition: .4s;
     box-shadow: 0 10px 30px rgba(0,0,0,.3);
 }
-.card:hover{
-    transform: translateY(-10px);
-    border-color: #75cfff;
-}
 .match{
     font-size: 1.5rem;
     font-weight: 700;
@@ -542,21 +538,15 @@ header p{
     backdrop-filter: blur(15px);
     border-radius: 20px;
     overflow: hidden;
-    cursor: pointer;
     transition: 0.3s;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
-.cardd:hover{
-    transform: translateY(-8px);
-    border-color: #7ccfff;
-}
 .img{
-    height: 180px;
+    height: 225px;
     background: linear-gradient(135deg,#74c0fc33,#ffffff10);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
     color: #cfe8ff;
 }
 .content{
@@ -565,11 +555,13 @@ header p{
 .name{
     font-size: 1.2rem;
     font-weight: 700;
+    color: #000000;
 }
 .role{
     font-size: 0.9rem;
     color: #bcd6ff;
     margin-top: 3px;
+    color: #000000;
 }
 .btn{
     margin-top: 10px;
@@ -581,14 +573,21 @@ header p{
     border: 1px solid #74c0fc55;
     color: white;
     cursor: pointer;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #00bbff;
+    color: #000000;
 }
 .details{
     max-height: 0;
     overflow: hidden;
     transition: 0.5s ease;
     padding: 0 15px;
-    color: #d9ecff;
+    color: #000000;
     font-size: 13px;
+    font-weight: 700;
 }
 .cardd.active .details{
     max-height: 200px;
@@ -611,6 +610,14 @@ header p{
         85% { opacity: 1; transform: translateX(-100px); height: 320px; }
         100%{ opacity: 1; transform: translateX(-100px); height: 320px; }
     }
+    .img{
+        height: 225px;
+        background: linear-gradient(135deg,#74c0fc33,#ffffff10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #cfe8ff;
+    }
 }
 /* ================================================
    BREAKPOINT 2 — STANDARD LAPTOP  (max-width: 1280px)
@@ -630,6 +637,14 @@ header p{
         85% { opacity: 1; transform: translateX(-100px); height: 300px; }
         100%{ opacity: 1; transform: translateX(-100px); height: 300px; }
     }
+    .img{
+        height: 225px;
+        background: linear-gradient(135deg,#74c0fc33,#ffffff10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #cfe8ff;
+    }
 }
 /* ================================================
    BREAKPOINT 3 — TABLET LANDSCAPE  (max-width: 1024px)
@@ -648,7 +663,7 @@ header p{
         height: 70px;
     }
     #three_starts{
-        height: 80px;
+        height: 70px;
     }
     .matches{
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -674,12 +689,20 @@ header p{
         padding: 35px 0;
     }
     @keyframes fifa_animation {
-        0%  { opacity: 0; transform: translateX(200px); height: 150px; }
+        0%  { opacity: 0; transform: translateX(250px); height: 150px; }
         25% { opacity: 1; transform: translateX(0px);   height: 150px; }
         70% { opacity: 1; transform: translateX(0px);   height: 150px; }
         79% { opacity: 1; transform: translateX(-100px); height: 150px; }
         85% { opacity: 1; transform: translateX(-100px); height: 270px; }
         100%{ opacity: 1; transform: translateX(-100px); height: 270px; }
+    }
+    .img{
+        height: 225px;
+        background: linear-gradient(135deg,#74c0fc33,#ffffff10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #cfe8ff;
     }
 }
 /* ================================================
@@ -696,7 +719,7 @@ header p{
         font-size: 100px !important;
     }
     @keyframes fifa_animation {
-        0%  { opacity: 0; transform: translateX(150px); height: 100px; }
+        0%  { opacity: 0; transform: translateX(250px); height: 100px; }
         25% { opacity: 1; transform: translateX(0px);   height: 100px; }
         70% { opacity: 1; transform: translateX(0px);   height: 100px; }
         79% { opacity: 1; transform: translateX(-75px); height: 100px; }
@@ -719,7 +742,7 @@ header p{
         to{ opacity: 1; height: 55px; }
     }
     #three_starts{
-        height: 65px;
+        height: 70px;
     }
     .container{
         width: 95%;
@@ -754,7 +777,12 @@ header p{
         gap: 12px;
     }
     .img{
-        height: 130px;
+        height: 225px;
+        background: linear-gradient(135deg,#74c0fc33,#ffffff10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #cfe8ff;
     }
     .name{
         font-size: 1rem;
@@ -797,10 +825,10 @@ header p{
     #logo_of_afa_from_logo_background_from_intro_background{ height: 70px; }
     #FIFA_LOGO_from_logo_background_from_intro_background{   height: 80px; }
     #logo_devider_from_logo_background_from_intro_background{
-        font-size: 44px;
+        font-size: 80px !important;
     }
     @keyframes fifa_animation {
-        0%  { opacity: 0; transform: translateX(120px); height: 80px; }
+        0%  { opacity: 0; transform: translateX(250px); height: 80px; }
         25% { opacity: 1; transform: translateX(0px);   height: 80px; }
         70% { opacity: 1; transform: translateX(0px);   height: 80px; }
         79% { opacity: 1; transform: translateX(-50px); height: 80px; }
@@ -812,7 +840,7 @@ header p{
         height: 44px;
     }
     #three_starts{
-        height: 50px;
+        height: 70px;
     }
     .countdown{
         gap: 6px;
@@ -831,7 +859,12 @@ header p{
         grid-template-columns: 1fr;
     }
     .img{
-        height: 120px;
+        height: 225px;
+        background: linear-gradient(135deg,#74c0fc33,#ffffff10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #cfe8ff;
     }
     .world_cup_lists{
         font-size: 17px;
@@ -864,15 +897,15 @@ header p{
     #logo_of_afa_from_logo_background_from_intro_background{ height: 52px; }
     #FIFA_LOGO_from_logo_background_from_intro_background{   height: 60px; }
     #logo_devider_from_logo_background_from_intro_background{
-        font-size: 44px;
+        font-size: 60px !important;
     }
     @keyframes fifa_animation {
-        0%  { opacity: 0; transform: translateX(100px); height: 60px; }
+        0%  { opacity: 0; transform: translateX(250px); height: 60px; }
         25% { opacity: 1; transform: translateX(0px);   height: 60px; }
         70% { opacity: 1; transform: translateX(0px);   height: 60px; }
-        79% { opacity: 1; transform: translateX(-32px); height: 60px; }
-        85% { opacity: 1; transform: translateX(-32px); height: 140px; }
-        100%{ opacity: 1; transform: translateX(-32px); height: 140px; }
+        79% { opacity: 1; transform: translateX(-45px); height: 60px; }
+        85% { opacity: 1; transform: translateX(-45px); height: 140px; }
+        100%{ opacity: 1; transform: translateX(-45px); height: 140px; }
     }
     #afa_logo_from_topperdiv,
     #fifa_logo_from_topperdiv{ height: 36px; }
@@ -884,7 +917,7 @@ header p{
         from{ opacity: 0; height: 0px;  }
         to{   opacity: 1; height: 36px; }
     }
-    #three_starts{ height: 40px; }
+    #three_starts{ height: 70px; }
     header h1{ font-size: 1.5rem; }
     .card{ padding: 14px; border-radius: 14px; }
     .match{ font-size: 0.9rem; }
@@ -896,7 +929,14 @@ header p{
     .wcpic{ max-width: 100%; }
     .more{ font-size: 13px; }
     .moreee{ font-size: 13px; }
-    .img{ height: 100px; }
+    .img{
+        height: 225px;
+        background: linear-gradient(135deg,#74c0fc33,#ffffff10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #cfe8ff;
+    }
     .name{ font-size: 0.9rem; }
     .containerr{ padding: 10px 8px; }
     #made_by_from_main_div{
