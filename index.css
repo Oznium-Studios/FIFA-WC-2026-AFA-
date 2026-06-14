@@ -947,3 +947,11 @@ header p{
     }
     #od_logo_from_made_by_from_main_div{ height: 26px; }
 }
+@media (max-width: 260px) {
+        0%  { opacity: 0; transform: translateX(250px); height: 60px; }
+        25% { opacity: 1; transform: translateX(0px);   height: 60px; }
+        70% { opacity: 1; transform: translateX(0px);   height: 60px; }
+        79% { opacity: 1; transform: translateX(-70px); height: 60px; }
+        85% { opacity: 1; transform: translateX(-70px); height: 140px; }
+        100%{ opacity: 1; transform: translateX(-70px); height: 140px; }
+}
