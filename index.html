@@ -59,6 +59,20 @@
             <img src="mainlogo.gif" alt="gif" id="OS_logo_from_name_and_logo_div">
         </div>
         <div id="fifa2026afa">
+            <div id="update_status">
+                <p style="text-align: center; color: white; font-size: 60%;">
+                    UPDATE 1.1.0
+                </p>
+                <P style="color: white; font-size: 60%;">
+                    • MATCH UPDATE
+                </P>
+                <P style="color: white; font-size: 60%;">
+                    • QUIZ ADDED
+                </P>
+                <p style="color: white; font-size: 60%;">
+                    • BUG FIXED
+                </p>
+             </div>
             <nav id="topper_nav">
                 <img src="AFA_logo.png" alt="#" id="afa_logo_from_topperdiv">
                 <h2 style="font-size: 50px;">
@@ -77,15 +91,24 @@
                    <p>Road to Glory • Vamos Argentina!</p>
                  </header>
                  <div class="matches">
-                   <div class="card">
-                     <div class="match">🇦🇷 Argentina vs Algeria 🇩🇿</div>
-                     <div class="info">
-                      📅 17 June 2026<br>
-                      ⏰ 7:00 AM (BST)
-                      </div>
-                      <div class="countdown" data-date="2026-06-17T07:00:00+06:00"></div>
-                   </div>
-                   <div class="card">
+                   <div class="game_status">
+                     <p style="font-size: 120%; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 700; text-align: center;">
+                         ARGENTINA vs ALGERIA
+                     </p>
+                     <p style="color: rgb(174, 174, 174); font-size: 90%; text-align: center;">
+                         Full time
+                     </p>
+                     <p style="font-size: 140%; color: aliceblue; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 900; text-align: center;">
+                         Status: Winner(ARG)
+                     </p>
+                     <p style="font-size: 100%; color: aliceblue; font-weight: 600; font-family: Arial, Helvetica, sans-serif; text-align: center;">
+                         ARG 0 - 0 ALG
+                     </p>
+                     <p style="color: white; text-align: center;">
+                         17th June, 2026
+                     </p>
+                    </div>
+                   <div class="carddd">
                      <div class="match">🇦🇷 Argentina vs Austria 🇦🇹</div>
                      <div class="info">
                        📅 22 June 2026<br>
@@ -93,7 +116,7 @@
                      </div>
                      <div class="countdown" data-date="2026-06-22T23:00:00+06:00"></div>
                    </div>
-                   <div class="card">
+                   <div class="carddd">
                      <div class="match">🇦🇷 Argentina vs Jordan 🇯🇴</div>
 
                      <div class="info">
@@ -242,6 +265,63 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="container_of_quiz">
+                <div id="quizBox"> 
+                    <div class="headerr"> 
+                        <h1>
+                            🇦🇷 Argentina Fan Quiz
+                        </h1> 
+                        <p>
+                            Only true Argentina supporters can score minimum 80 out of 100!
+                        </p> 
+                    </div> 
+                    <div class="progress"> 
+                        <span id="questionNumber">
+                        </span> 
+                        <span id="scoreDisplay">
+                            Score: 0
+                        </span> 
+                    </div> 
+                    <div class="warning" id="warning">
+                        ⚠️ Nothing selected! 
+                    </div> 
+                    <div class="question" id="question">
+                    </div> 
+                    <div class="options" id="options">
+                    </div> 
+                    <button class="btnn" onclick="nextQuestion()"> 
+                        Next Question 
+                    </button> 
+                </div>
+                <div class="result" id="resultBox"> 
+                    <h2>
+                        🏆 Quiz Completed!
+                    </h2> 
+                    <div class="score-circle"> 
+                        <span id="finalScore">
+                            0
+                        </span> 
+                        <span>
+                            /100
+                        </span> 
+                    </div> 
+                    <div class="stats"> 
+                        <div class="card correct"> 
+                            ✅ Correct: 
+                            <span id="correctCount">
+                            </span> 
+                        </div> 
+                        <div class="card wrong"> 
+                            ❌ Wrong: 
+                            <span id="wrongCount">
+                            </span> 
+                        </div> 
+                    </div> 
+                    <button class="btnn restart" onclick="restartQuiz()"> 
+                        Play Again 
+                    </button> 
+                </div>
             </div>
             <div id="world_cup_detail_div">
                 <p class="world_cup_lists">

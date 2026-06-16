@@ -19,7 +19,7 @@ body{
     box-sizing: border-box;
     z-index: 10;
     position: fixed;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(235, 235, 235);
 }
 .dv{
     height: 160px;
@@ -66,21 +66,23 @@ body{
     height: 100vh;
     width: 100%;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.135);
-    backdrop-filter: blur(100px);
-    -webkit-backdrop-filter: blur(100px);
+    background: linear-gradient(90deg,rgba(0, 187, 255, 0.442) 0%, rgba(255, 255, 255, 0) 60% 40%, rgba(255, 255, 255, 0) 60%, rgba(0, 187, 255, 0.442) 100%);
+    backdrop-filter: blur(70px);
+    -webkit-backdrop-filter: blur(70px);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 #div_of_txt_permission{
     height: 300px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 153, 255);
     position: fixed;
     z-index: 11;
     border-radius: 15px;
     padding: 1% 2%;
     width: min(400px, 90vw);
+    border: 1px solid black;
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.448);
     animation: hajabajalaani 0.5s ease forwards;
 }
 @keyframes hajabajalaani{
@@ -102,11 +104,12 @@ body{
     font-size: 200%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 15%;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 #button_of_all_permissions:hover{
-    background-color: rgba(131, 131, 131, 0.376);
-    height: 42%;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: 900;
 }
 #intro_background{
     height: 86vh;
@@ -452,7 +455,7 @@ header p{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
 }
-.card{
+.carddd{
     background: rgba(255,255,255,.08);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255,255,255,.15);
@@ -592,6 +595,159 @@ header p{
 .cardd.active .details{
     max-height: 200px;
     padding: 10px 15px 15px 15px;
+}
+.container_of_quiz{
+    height: auto;
+    width: 94%;
+    margin: auto;
+    padding-top: 1%;
+    padding-left: 0.4%;
+    padding-right: 0.4%;
+    padding-bottom: 3%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00bbff31;
+    border-radius: 15px;
+
+}
+.headerr{ 
+    text-align:center; 
+    margin-bottom:25px; 
+} 
+.headerr h1{ 
+    color:#00a2ff; 
+    font-size:2.3rem; 
+} 
+.headerr p{ 
+    color:#666; 
+    margin-top:10px; 
+} 
+.progress{ 
+    display:flex; 
+    justify-content:space-between; 
+    margin-bottom:20px; 
+    font-weight:bold; color:#0084d6; 
+} 
+.warning{ 
+    display:none; 
+    color:red; 
+    font-weight:bold; 
+    text-align:center; 
+    margin-bottom:15px; 
+} .question{ 
+    font-size:1.4rem; 
+    font-weight:bold; 
+    margin-bottom:25px; 
+    color:#333; 
+} 
+.options{ 
+    display:grid; 
+    gap:15px; 
+} 
+.option{ 
+    border:2px solid #d9f0ff; 
+    background:#f7fcff; 
+    padding:18px; 
+    border-radius:15px; 
+    cursor:pointer; 
+    transition:.3s; 
+    font-size:1rem; 
+} .option:hover{ 
+    transform:translateY(-3px);
+    border-color:#00a2ff; 
+} 
+.option.selected{ 
+    background:#00a2ff; 
+    color:white; 
+    border-color:#00a2ff; 
+} 
+.btnn{ 
+    margin-top:30px; 
+    width:100%; 
+    padding:16px; 
+    border:none;
+    border-radius:15px; 
+    background:#00a2ff; 
+    color:white; 
+    font-size:1rem; 
+    font-weight:bold; 
+    cursor:pointer; 
+    transition:.3s; 
+} 
+.btnn:hover{ 
+    background:#0084d6; 
+} 
+.result{ 
+    display:none; 
+    text-align:center; 
+} 
+.result h2{ 
+    color:#00a2ff;
+     margin-bottom:25px; 
+} 
+.score-circle{ 
+    width:180px; 
+    height:180px; 
+    border-radius:50%; 
+    background:linear-gradient(135deg,#00a2ff,#74c0fc); 
+    color:white; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+    flex-direction:column; 
+    margin:20px auto; 
+    box-shadow:0 10px 25px rgba(0,162,255,.4); 
+} 
+.score-circle span:first-child{ 
+    font-size:3rem; font-weight:bold; 
+} 
+.stats{ 
+    margin-top:20px; 
+    display:grid; 
+    grid-template-columns:1fr 1fr; 
+    gap:15px; 
+} 
+.card{
+    background:#f7fcff; 
+    padding:20px; 
+    border-radius:15px; 
+    font-weight:bold; 
+} 
+.correct{ 
+    color:green; 
+} 
+.wrong{ 
+    color:red; 
+} 
+.restart{ 
+    margin-top:25px;
+}
+.game_status{
+    height: auto;
+    background: rgba(57, 255, 2, 0.222);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 25px;
+    padding: 30px;
+    transition: .4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+#update_status{
+    height: auto;
+    background-color: #0000009c;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
+    border-radius: 12px;
+    width: 90px;
+    position: fixed;
+    z-index: 10;
+    padding-left: 1%;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: -0.5%;
 }
 /* ================================================
    BREAKPOINT 1 — LARGE DESKTOP  (max-width: 1440px)
