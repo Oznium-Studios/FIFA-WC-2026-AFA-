@@ -156,6 +156,11 @@ options:["1","2","3","4"],
 answer:1
 },
 {
+question:"Who did the first Hat-trick from argentina in world cup 2026?",
+options:["Alvarez","E. Martinez","Messi","De Paul"],
+answer:3
+},
+{
 question:"Who was Argentina's captain in the 2022 World Cup?",
 options:["Di Maria","Messi","Otamendi","Martinez"],
 answer:1
