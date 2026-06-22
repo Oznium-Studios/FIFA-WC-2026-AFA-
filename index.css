@@ -304,7 +304,7 @@ body{
     height: auto;
     width: 100%;
     background: #00bbff;
-    background: linear-gradient(90deg,rgba(0, 187, 255, 1) 0%, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 60%, rgba(0, 187, 255, 1) 100%);
+    background: linear-gradient(90deg,rgba(0, 187, 255, 1) 0%, rgb(190, 238, 255) 40%,rgb(255, 255, 255)50%, rgb(190, 238, 255) 60%, rgba(0, 187, 255, 1) 100%);
     z-index: 0;
 }
 #topper_nav{
@@ -354,11 +354,20 @@ body{
     height: 100px;
 }
 #three_starts.show{
-    animation: starani 0.8s ease forwards;
+    animation: starani 3s ease-in-out infinite;
 }
 @keyframes starani{
-    from{ opacity: 0; }
-    to{ opacity: 1; }
+    0%,100%{
+        filter:drop-shadow(0 0 0px gold);
+        transform:scale(1);
+    }
+
+    50%{
+        filter:
+            drop-shadow(0 0 10px gold)
+            drop-shadow(0 0 25px gold);
+        transform:scale(1.08);
+    }
 }
 #world_cup_detail_div{
     height: auto;
@@ -385,6 +394,12 @@ body{
     border-radius: 10px;
     max-width: 100%;
     object-fit: cover;
+    transition:.5s;
+}
+.wcpic:hover{
+    transform:scale(1.05);
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.4);
 }
 .pic_with_detail_wc{
     height: auto;
@@ -463,6 +478,11 @@ header p{
     padding: 30px;
     transition: .4s;
     box-shadow: 0 10px 30px rgba(0,0,0,.3);
+    transition:.4s ease;
+}
+.carddd:hover{
+    transform:translateY(-12px) scale(1.03) rotateX(5deg);
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
 }
 .match{
     font-size: 1.5rem;
@@ -543,6 +563,11 @@ header p{
     overflow: hidden;
     transition: 0.3s;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition:.4s ease;
+}
+.cardd:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 18px 45px rgba(0,0,0,.45);
 }
 .img{
     height: 225px;
@@ -727,12 +752,17 @@ header p{
 }
 .game_status{
     height: auto;
-    background: rgba(57, 255, 2, 0.222);
+    background: rgba(57, 255, 2, 0.328);
     border: 1px solid rgba(255,255,255,.15);
     border-radius: 25px;
     padding: 30px;
-    transition: .4s;
+    transition: 0.4s;
     box-shadow: 0 10px 30px rgba(0,0,0,.3);
+    transition:.4s ease;
+}
+.game_status:hover{
+    transform:translateY(-12px) scale(1.03) rotateX(5deg);
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
 }
 #update_status{
     height: auto;
