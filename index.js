@@ -80,58 +80,31 @@ removeby.addEventListener('click', ()=>{
         document.body.style.overflowX='hidden';
     },10000);
 });
-const countdowns = document.querySelectorAll(".countdown");
 
-function updateCountdown(){
-    countdowns.forEach(counter => {
-        const target = new Date(counter.dataset.date).getTime();
-        const now = new Date().getTime();
-        const diff = target - now;
-        if(diff <= 0){
-            counter.innerHTML = `
-                <div class="live">
-                    🔥 MATCH DAY 🔥
-                    <br>
-                    Vamos Argentina!
-                </div>
-            `;
-            return;
-        }
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-            (diff % (1000 * 60 * 60 * 24))
-            / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor(
-            (diff % (1000 * 60 * 60))
-            / (1000 * 60)
-        );
-        const seconds = Math.floor(
-            (diff % (1000 * 60))
-            / 1000
-        );
-        counter.innerHTML = `
-            <div class="box">
-                <span>${days}</span>
-                <small>Days</small>
-            </div>
-            <div class="box">
-                <span>${hours}</span>
-                <small>Hours</small>
-            </div>
-            <div class="box">
-                <span>${minutes}</span>
-                <small>Minutes</small>
-            </div>
-            <div class="box">
-                <span>${seconds}</span>
-                <small>Seconds</small>
-            </div>
-        `;
-    });
+function runCountdown(){
+    const target = new Date("2026-07-04T03:30:00+06:00").getTime();
+    const now = new Date().getTime();
+    const diff = target - now;
+
+    if(diff <= 0){
+        document.querySelector(".countdown").innerHTML =
+            "<h2 style='grid-column:1/-1;color:#59d8ff;font-size:35px;text-align:center;'>⚽ MATCH STARTED ⚽</h2>";
+        return;
+    }
+
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById('days').innerHTML   = String(d).padStart(2,'0');
+    document.getElementById('hours').innerHTML  = String(h).padStart(2,'0');
+    document.getElementById('minutes').innerHTML = String(m).padStart(2,'0');
+    document.getElementById('seconds').innerHTML = String(s).padStart(2,'0');
 }
-updateCountdown();
-setInterval(updateCountdown,1000);
+
+runCountdown();
+setInterval(runCountdown, 1000);
 
 document.querySelectorAll(".cardd").forEach(card => {
     card.addEventListener("click", () => {
@@ -158,7 +131,7 @@ answer:1
 {
 question:"Who did the first Hat-trick from argentina in world cup 2026?",
 options:["Alvarez","E. Martinez","Messi","De Paul"],
-answer:3
+answer:2
 },
 {
 question:"Who was Argentina's captain in the 2022 World Cup?",
